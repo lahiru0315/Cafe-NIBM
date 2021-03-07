@@ -11,6 +11,8 @@
 		2ACE76C825F3E227005BFCDA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2ACE76C725F3E227005BFCDA /* GoogleService-Info.plist */; };
 		2ACE76CA25F4939D005BFCDA /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE76C925F4939D005BFCDA /* CustomTableViewCell.swift */; };
 		2ACE76CE25F49800005BFCDA /* FoodUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE76CD25F49800005BFCDA /* FoodUIController.swift */; };
+		2ACE76D125F537C5005BFCDA /* RegisterUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE76D025F537C5005BFCDA /* RegisterUiViewController.swift */; };
+		2ACE76D625F55917005BFCDA /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE76D525F55917005BFCDA /* Items.swift */; };
 		2AEAFF8C25F2701200F2DD0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEAFF8B25F2701200F2DD0D /* AppDelegate.swift */; };
 		2AEAFF8E25F2701200F2DD0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEAFF8D25F2701200F2DD0D /* SceneDelegate.swift */; };
 		2AEAFF9025F2701200F2DD0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEAFF8F25F2701200F2DD0D /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 		2ACE76C725F3E227005BFCDA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2ACE76C925F4939D005BFCDA /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		2ACE76CD25F49800005BFCDA /* FoodUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodUIController.swift; sourceTree = "<group>"; };
+		2ACE76D025F537C5005BFCDA /* RegisterUiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUiViewController.swift; sourceTree = "<group>"; };
+		2ACE76D525F55917005BFCDA /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		2AEAFF8825F2701200F2DD0D /* Cafe-NIBM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cafe-NIBM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AEAFF8B25F2701200F2DD0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AEAFF8D25F2701200F2DD0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,8 +121,24 @@
 			children = (
 				2ACE76C125F3D6DC005BFCDA /* LoginUiController.swift */,
 				2ACE76CD25F49800005BFCDA /* FoodUIController.swift */,
+				2ACE76D025F537C5005BFCDA /* RegisterUiViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2ACE76CF25F51F6C005BFCDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2ACE76D425F54F53005BFCDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE76D525F55917005BFCDA /* Items.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2AEAFF7F25F2701200F2DD0D = {
@@ -146,6 +166,7 @@
 		2AEAFF8A25F2701200F2DD0D /* Cafe-NIBM */ = {
 			isa = PBXGroup;
 			children = (
+				2ACE76CF25F51F6C005BFCDA /* View */,
 				2ACE76C725F3E227005BFCDA /* GoogleService-Info.plist */,
 				2ACE76C025F3D491005BFCDA /* ViewController */,
 				2AEAFF8B25F2701200F2DD0D /* AppDelegate.swift */,
@@ -156,6 +177,7 @@
 				2AEAFF9625F2701500F2DD0D /* LaunchScreen.storyboard */,
 				2AEAFF9925F2701500F2DD0D /* Info.plist */,
 				2ACE76C925F4939D005BFCDA /* CustomTableViewCell.swift */,
+				2ACE76D425F54F53005BFCDA /* Model */,
 			);
 			path = "Cafe-NIBM";
 			sourceTree = "<group>";
@@ -428,9 +450,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ACE76D625F55917005BFCDA /* Items.swift in Sources */,
 				2ACE76C225F3D6DC005BFCDA /* LoginUiController.swift in Sources */,
 				2ACE76CE25F49800005BFCDA /* FoodUIController.swift in Sources */,
 				2ACE76CA25F4939D005BFCDA /* CustomTableViewCell.swift in Sources */,
+				2ACE76D125F537C5005BFCDA /* RegisterUiViewController.swift in Sources */,
 				2AEAFF9025F2701200F2DD0D /* ViewController.swift in Sources */,
 				2AEAFF8C25F2701200F2DD0D /* AppDelegate.swift in Sources */,
 				2AEAFF8E25F2701200F2DD0D /* SceneDelegate.swift in Sources */,

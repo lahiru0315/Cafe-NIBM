@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="iOG-xg-Oy9">
+            <objects>
+                <viewController id="QYL-oj-5Lz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uLQ-dz-5c9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="16U-q4-6Nk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DmM-Bw-y6z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8z-ta-Qh2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3591" y="-348"/>
+        </scene>
         <!--Login-->
         <scene sceneID="cL5-qi-QeG">
             <objects>
@@ -216,6 +232,9 @@
                                                 <include reference="gJl-zy-1HL"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <segue destination="73l-BD-9Tm" kind="show" id="gBg-W3-SWp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfS-O7-Kqv">
                                         <rect key="frame" x="70" y="110" width="234" height="35"/>
@@ -475,7 +494,7 @@
                         <outlet property="txt_email" destination="pH7-sc-yuQ" id="mf4-K7-EKU"/>
                         <outlet property="txt_password" destination="NUc-52-pcV" id="Lnx-1C-Umn"/>
                         <segue destination="1vj-gP-2CC" kind="show" identifier="Food" id="UFy-yr-Nl2"/>
-                        <segue destination="73l-BD-9Tm" kind="show" id="gNh-Lt-xhs"/>
+                        <segue destination="QYL-oj-5Lz" kind="show" id="etM-Pj-QTJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oy9-Sf-iCu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -526,7 +545,7 @@
         <!--REGISTER-->
         <scene sceneID="amg-Fl-2HA">
             <objects>
-                <viewController id="73l-BD-9Tm" sceneMemberID="viewController">
+                <viewController id="73l-BD-9Tm" customClass="RegisterUiViewController" customModule="Cafe_NIBM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CTX-Hk-uMT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -654,6 +673,9 @@
                                                 <include reference="YyG-qe-wy5"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="btn_register:" destination="73l-BD-9Tm" eventType="touchUpInside" id="kw9-GW-kmX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -859,6 +881,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="REGISTER" id="1vc-cH-eTL"/>
+                    <connections>
+                        <outlet property="txt_email" destination="Gcl-N9-dxb" id="3WI-RH-gDo"/>
+                        <outlet property="txt_password" destination="Fu5-Im-4Cm" id="wxG-Sq-oUh"/>
+                        <outlet property="txt_phone_no" destination="MoM-Qd-Yuo" id="9Xn-P9-qPE"/>
+                        <segue destination="1vj-gP-2CC" kind="show" identifier="Food" id="fG7-XA-cN3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Quy-Us-ex6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -910,7 +938,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WYi-zn-dcv" userLabel="Table Vew_foodMenu">
-                                <rect key="frame" x="20" y="296" width="374" height="371"/>
+                                <rect key="frame" x="20" y="340" width="374" height="453"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="120" id="55q-yZ-GUY" customClass="CustomTableViewCell" customModule="Cafe_NIBM" customModuleProvider="target">
@@ -990,7 +1018,7 @@
                                 </prototypes>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZAV-4g-Vzv" userLabel="Table View_cart">
-                                <rect key="frame" x="20" y="44" width="374" height="192"/>
+                                <rect key="frame" x="20" y="88" width="374" height="192"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="192" id="Od0-WI-KlO"/>
@@ -1029,7 +1057,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-En-uid">
-                                <rect key="frame" x="20" y="256" width="374" height="30"/>
+                                <rect key="frame" x="20" y="300" width="374" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y8-a2-YQ6">
                                         <rect key="frame" x="0.0" y="0.0" width="89.333333333333329" height="30"/>
@@ -1068,7 +1096,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7M-Am-0CQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4730" y="-398"/>
+            <point key="canvasLocation" x="4912" y="-348"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5Mu-yx-2XO">
@@ -1166,9 +1194,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dw-ZB-pGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6075" y="-236"/>
+            <point key="canvasLocation" x="5900" y="-348"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fG7-XA-cN3"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="burgers" width="483.66665649414062" height="386.66665649414062"/>
         <image name="logo" width="32" height="32"/>
