@@ -23,8 +23,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafe'NIBM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTZ-7B-ais">
-                                <rect key="frame" x="144.33333333333334" y="446" width="86.666666666666657" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <rect key="frame" x="113.00000000000001" y="446" width="149.33333333333337" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
